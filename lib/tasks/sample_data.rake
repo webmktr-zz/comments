@@ -17,5 +17,16 @@ namespace :db do
                    password: password,
                    password_confirmation: password)
     end
+    
+    def make_comments
+      users = User.all(limit: 6)
+      2.times do
+        content = Faker::Lorem.sentence(5)
+        users.each { |user| user.comments.create!(content: content) }
+      end
+    end
+
   end
+  
+  
 end
