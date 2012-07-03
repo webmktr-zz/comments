@@ -38,7 +38,7 @@ var CommentView = Backbone.View.extend({
 });
 
 var CommentListView = Backbone.View.extend({
-  el: "body",
+  el: "#comments",
 
   events: {
     'click .add': 'newComment'

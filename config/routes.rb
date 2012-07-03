@@ -1,6 +1,6 @@
 SampleApp::Application.routes.draw do
-  
-resources :comments, only: [:index, :create, :destroy]
+
+resources :comments, only: [:index, :create, :destroy, :update]
 
 resources :users
 resources :sessions, only: [:new, :create, :destroy]
